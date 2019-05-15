@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false">
+
+
+    <RelativeLayout
+        android:id="@+id/item_live_voice_gift_content"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="left"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/live_voice_gift_item_bg"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.ellison.combo.widget.RoundImageView
+            android:id="@+id/item_live_voice_gift_iv_header"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dp"
+            android:scaleType="centerCrop"
+            app:border_color="#999999"
+            app:border_width="0.1dp"
+            app:type="oval" />
+
+        <TextView
+            android:id="@+id/item_live_voice_gift_tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/item_live_voice_gift_iv_header"
+            android:maxLines="1"
+            android:textColor="#2d2d2d"
+            android:textSize="14sp"
+            tools:text="nickName" />
+
+        <TextView
+            android:id="@+id/item_live_voice_gift_tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_live_voice_gift_tv_nickname"
+            android:layout_alignLeft="@+id/item_live_voice_gift_tv_nickname"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="40dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ffea79"
+            android:textSize="11sp"
+            tools:text="送了一个+U鹿" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/item_live_voice_gift_iv_gift"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-35dp"
+        android:layout_toRightOf="@+id/item_live_voice_gift_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/item_live_voice_gift_content"
+        app:layout_constraintRight_toRightOf="@+id/item_live_voice_gift_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_live_voice_gift_tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center|end"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/item_live_voice_gift_iv_gift"
+        android:text="x 1"
+        android:textColor="#ffc657"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/item_live_voice_gift_content"
+        app:layout_constraintLeft_toRightOf="@+id/item_live_voice_gift_iv_gift"
+        app:layout_constraintTop_toTopOf="@+id/item_live_voice_gift_content" />
+
+</RelativeLayout>
